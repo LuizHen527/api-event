@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "apis1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/eventwebapi-luiz/apis/eventwebapi-luiz",
+      "type": "apis.azure"
+    }
+  }
+}
