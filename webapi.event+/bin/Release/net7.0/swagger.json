@@ -37,18 +37,18 @@
         }
       }
     },
-    "/api/ComentariosEvento": {
+    "/api/ComentariosEvento/{id}": {
       "get": {
         "tags": [
           "ComentariosEvento"
         ],
         "parameters": [
           {
-            "in": "query",
+            "in": "path",
             "name": "id",
+            "required": true,
             "type": "string",
-            "format": "uuid",
-            "collectionFormat": "multi"
+            "format": "uuid"
           }
         ],
         "responses": {
@@ -57,23 +57,17 @@
           }
         }
       },
-      "post": {
+      "delete": {
         "tags": [
           "ComentariosEvento"
         ],
-        "consumes": [
-          "application/json-patch+json",
-          "application/json",
-          "text/json",
-          "application/*+json"
-        ],
         "parameters": [
           {
-            "in": "body",
-            "name": "body",
-            "schema": {
-              "$ref": "#/definitions/ComentariosEvento"
-            }
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
           }
         ],
         "responses": {
@@ -83,18 +77,18 @@
         }
       }
     },
-    "/api/ComentariosEvento/ListarSomenteExibe": {
+    "/api/ComentariosEvento/ListarSomenteExibe/{id}": {
       "get": {
         "tags": [
           "ComentariosEvento"
         ],
         "parameters": [
           {
-            "in": "query",
+            "in": "path",
             "name": "id",
+            "required": true,
             "type": "string",
-            "format": "uuid",
-            "collectionFormat": "multi"
+            "format": "uuid"
           }
         ],
         "responses": {
@@ -132,18 +126,24 @@
         }
       }
     },
-    "/api/ComentariosEvento/{id}": {
-      "delete": {
+    "/api/ComentariosEvento": {
+      "post": {
         "tags": [
           "ComentariosEvento"
         ],
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
         "parameters": [
           {
-            "in": "path",
-            "name": "id",
-            "required": true,
-            "type": "string",
-            "format": "uuid"
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/ComentariosEvento"
+            }
           }
         ],
         "responses": {

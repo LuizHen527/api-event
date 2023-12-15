@@ -58,7 +58,7 @@ namespace webapi.event_.Controllers
             }
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public IActionResult Get(Guid id)
         {
             try
@@ -71,7 +71,7 @@ namespace webapi.event_.Controllers
             }
         }
 
-        [HttpGet("ListarSomenteExibe")]
+        [HttpGet("ListarSomenteExibe/{id}")]
         public IActionResult GetShow(Guid id)
         {
             try

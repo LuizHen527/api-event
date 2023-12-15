@@ -113,9 +113,11 @@ namespace webapi.event_.Repositories
                 return _context.ComentariosEvento
                     .Select(c => new ComentariosEvento
                     {
+                        IdComentarioEvento = c.IdComentarioEvento,
                         Descricao = c.Descricao,
                         Exibe = c.Exibe,
-                        IdUsuario= c.IdUsuario,
+                        IdUsuario = c.IdUsuario,
+                        IdEvento = c.IdEvento,
 
                         Usuario = new Usuario
                         {
@@ -147,6 +149,7 @@ namespace webapi.event_.Repositories
                         Descricao = c.Descricao,
                         Exibe = c.Exibe,
                         IdUsuario = c.IdUsuario,
+                        IdEvento = c.IdEvento,
 
                         Usuario = new Usuario
                         {
